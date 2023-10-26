@@ -19,11 +19,11 @@ public class BaseTest {
         new LoginPage(driver).openwebsite();
     }
 
-//    @AfterMethod
-//    public void flush ()
-//    {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void flush ()
+    {
+        driver.quit();
+    }
 
 
 }

@@ -52,7 +52,7 @@ public class RegistrationPage {
 
     //actions
 
-    public LoginPage performRegistration (String fullName , String userName , String email , String password , String confirm_pass)
+    public CreateCompanyPage performRegistration (String fullName , String userName , String email , String password , String confirm_pass)
     {
         driver.findElement(fullNameField()).sendKeys(fullName);
         driver.findElement(userNameField()).sendKeys(userName);
@@ -60,7 +60,7 @@ public class RegistrationPage {
         driver.findElement(passwordField()).sendKeys(password);
         driver.findElement(confirmPasswordField()).sendKeys(confirm_pass);
         driver.findElement(submitButton()).click();
-        return new LoginPage(driver);
+        return new CreateCompanyPage(driver);
     }
 
 

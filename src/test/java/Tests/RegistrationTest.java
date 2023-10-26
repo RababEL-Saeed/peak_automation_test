@@ -1,5 +1,6 @@
 package Tests;
 
+import Pages.CreateCompanyPage;
 import Pages.LoginPage;
 import Pages.RegistrationPage;
 import org.testng.Assert;
@@ -24,9 +25,9 @@ public class RegistrationTest  extends  BaseTest {
     {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        new LoginPage(driver).clickCreateACCLink().performRegistration("testautomation","firsttest","secondtest@gmail.com","12345678","12345678");
+        new LoginPage(driver).clickCreateACCLink().performRegistration("testautomation","firsttest","secondtest3@gmail.com","12345678","12345678");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        Assert.assertTrue(driver.findElement(LoginPage.userName()).isDisplayed());
+        Assert.assertTrue(driver.findElement(CreateCompanyPage.welcomeMsgLocator()).isDisplayed());
 
     }
 
